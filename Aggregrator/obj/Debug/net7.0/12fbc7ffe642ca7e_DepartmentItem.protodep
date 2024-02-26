@@ -1,0 +1,2 @@
+obj\Debug\net7.0\Protos/DepartmentItem.cs \
+obj\Debug\net7.0\Protos/DepartmentItemGrpc.cs: Protos/DepartmentItem.proto

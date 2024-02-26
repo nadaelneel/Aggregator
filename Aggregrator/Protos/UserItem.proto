@@ -1,0 +1,67 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "UserApp.Application";
+
+service UserItem
+{
+	//create
+	rpc createUser(createUserRequest) returns (createUserResponse) {
+		
+	}
+	//getAll
+	rpc ListUser(GetAllUserRequest) returns (GetAllUserResponse){
+		 
+	}
+	//Get One
+	rpc ReadOne(ReadUserRequest) returns (ReadUserResponse){
+		
+	}
+	//Delete
+	//rpc DeleteUser (DeleteUserRequest) returns (DeleteUserResponse){}
+	//Update
+	rpc UpdateUser (UpdateUserRequest) returns (UpdateUserResponse){
+		
+	}
+}
+
+message createUserRequest
+{
+	string Name =1;
+	int32 DepartemntId =2;
+}
+message createUserResponse
+{
+	int32 id = 1;
+}
+
+message ReadUserRequest
+{
+	int32 id = 1;
+}
+message ReadUserResponse
+{
+	int32 id = 1;
+	string Name =2;
+	int32 DepartemntId =3;
+}
+message GetAllUserRequest{}
+message GetAllUserResponse{
+	repeated ReadUserResponse Users = 1;
+}
+
+message UpdateUserRequest{
+	int32 id = 1;
+	string Name =2;
+	int32 DepartemntId =3;
+}
+
+message UpdateUserResponse{
+	int32 id =1;
+}
+message DeleteUserRequest{
+	int32 id=1;
+}
+message DeleteUserResponse{
+	int32 id =1;
+}
+
